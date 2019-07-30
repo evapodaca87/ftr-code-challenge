@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Input, Button, Grid, Popup } from 'semantic-ui-react';
+import PopupExampleNested from './buttons';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          cards: [],
+          results: []
+      };
+  }
+
+  search = (e) => {
+      let lowercase = e.target.value.toLowerCase();
+      
+  };
+
+  async componentDidMount() {
+      
+  }
+
+  render() {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <h1>For The Record</h1>
+            <h2>Coding Challenge</h2>
+          </header>
+          <div className="prompt" />
+          <PopupExampleNested />
+          <div className="answers">
+            Lets just placehold this one
+          </div>
+        </div>
+      );
+  }
 }
 
 export default App;
